@@ -9,6 +9,23 @@ function initTemplate(config, pluginConfig) {
   })
   return template
 }
+
+function getConfig(item) {
+  var config = {}
+  var str = item.slice(13, -1)
+  var tmp = str.split('?')
+  var pathArr = tmp[0].split('/')
+  var paramArr = tmp[1].split('&')
+  var user = pathArr[0]
+  var slugHash = pathArr[1]
+  config.user = user
+  config.slugHash = slugHash
+  paramArr.forEach(function(param) {
+    var paramTmp = param.split('=')
+    config[paramTmp[0]] = paramTmp[1]
+  })
+  return config
+}
 module.exports = {
   book: {
     assets: './assets',
@@ -22,21 +39,10 @@ module.exports = {
       if (codepenArrs.length) {
         var config = {}
         codepenArrs.forEach(function(item) {
-          var str = item.slice(13, -1)
-          var tmp = str.split('?')
-          var pathArr = tmp[0].split('/')
-          var paramArr = tmp[1].split('&')
-          var user = pathArr[0]
-          var slugHash = pathArr[1]
-          config.user = user
-          config.slugHash = slugHash
-          paramArr.forEach(function(param) {
-            var paramTmp = param.split('=')
-            config[paramTmp[0]] = paramTmp[1]
-          })
+          config = getConfig(item) || {}
+          var template = initTemplate(config, pluginsConfig)
+          page.content = page.content.replace(item, template)
         })
-        var template = initTemplate(config, pluginsConfig)
-        page.content += template
       }
       return page
     }
