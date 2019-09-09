@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-codepens",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A gitbook plugin for codepen",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,9 @@
     "gitbook-plugin-codepen",
     "gitbook-plugin-codepens"
   ],
+  "engines": {
+    "gitbook": ">=2.4.3"
+  },
   "author": "halapro.liu",
   "license": "ISC",
   "bugs": {
