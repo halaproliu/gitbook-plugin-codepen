@@ -6,7 +6,6 @@ let loadScript = url => {
   document.getElementsByTagName('head')[0].appendChild(script)
 }
 
-let addCodepenDiv = () => {}
 gitbook.events.bind('start', (e, config) => {
   const pluginConfig = config.codepen
   if (pluginConfig) {
