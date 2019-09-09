@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-codepens",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A gitbook plugin for codepen",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/halaproliu/gitbook-plugin-codepen.git"
+    "url": "git+https://github.com/halaproliu/gitbook-plugin-codepens.git"
   },
-  "keywords": ["gitbook", "codepen", "gitbook-plugin", "gitbook-plugin-codepen"],
+  "keywords": [
+    "gitbook",
+    "codepen",
+    "gitbook-plugin",
+    "gitbook-plugin-codepen",
+    "gitbook-plugin-codepens"
+  ],
   "author": "halapro.liu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/halaproliu/gitbook-plugin-codepen/issues"
+    "url": "https://github.com/halaproliu/gitbook-plugin-codepens/issues"
   },
-  "homepage": "https://github.com/halaproliu/gitbook-plugin-codepen#readme",
+  "homepage": "https://github.com/halaproliu/gitbook-plugin-codepens#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
