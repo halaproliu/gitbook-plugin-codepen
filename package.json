@@ -1,0 +1,35 @@
+{
+  "name": "gitbook-plugin-codepen",
+  "version": "0.0.1",
+  "description": "A gitbook plugin for codepen",
+  "main": "index.js",
+  "scripts": {
+    "build:browser": "rollup src/plugin.js --file assets/plugin.js --format iife",
+    "build:node": "rollup src/plugin.js --file assets/plugin.js --format cjs",
+    "build:all": "rollup src/plugin.js --file assets/plugin.js --format umd --name myBundle",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halaproliu/gitbook-plugin-codepen.git"
+  },
+  "keywords": [
+    "gitbook",
+    "codepen",
+    "gitbook-plugin",
+    "gitbook-plugin-codepen"
+  ],
+  "author": "halapro.liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halaproliu/gitbook-plugin-codepen/issues"
+  },
+  "homepage": "https://github.com/halaproliu/gitbook-plugin-codepen#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  }
+}
