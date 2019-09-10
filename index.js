@@ -1,5 +1,5 @@
 function initTemplate(config, pluginConfig) {
-  var _config = Object.assign({}, config, pluginConfig)
+  var _config = Object.assign({}, pluginConfig, config)
   var template =
     '<p class="codepen" data-height="<%=height%>" data-theme-id="<%=theme%>" data-default-tab="<%=defaultTab%>" data-user="<%=user%>" data-slug-hash="<%=slugHash%>" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="<%=title%>">\n      <span>See the Pen <a href="https://codepen.io/<%=user%>/pen/<%=slugHash%>/">\n      <%=title%></a> by halapro.liu (<a href="https://codepen.io/<%=user%>">@<%=user%></a>)\n      on <a href="https://codepen.io">CodePen</a>.</span>\n    </p>'
   var reg
