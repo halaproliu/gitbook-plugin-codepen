@@ -2,7 +2,6 @@ require(['gitbook'], function(gitbook) {
   var loadScript = function loadScript(url) {
     var script = document.createElement('script')
     script.src = url
-    script.async = 1
     document.getElementsByTagName('head')[0].appendChild(script)
   }
 
